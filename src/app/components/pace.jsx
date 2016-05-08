@@ -39,7 +39,6 @@ class Calculator extends React.Component {
 
         let newTime = hs + ms + s
         let newPace = newTime / this.state.distance
-        console.log(newPace)
 
         this.setState({
             time: newTime,
