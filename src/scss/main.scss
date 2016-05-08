@@ -1,0 +1,107 @@
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,700);
+
+// Imports & Includes
+@import 'bootstrap/bootstrap';
+
+// Site Styles and defaults
+html {
+    overflow-y: scroll;
+} //Dont remove this, it forces a scroll bar and prevents pages from jumping if the page is to short..
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+#bg {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-image: url('/assets/img/bg.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+
+#content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+
+    .calculator {
+        position: absolute;
+        left: 50%;
+        top: 40%;
+        transform: translate(-50%, -50%);
+        padding: $grid-gutter-width;
+        background: rgba(255,255,255,0.75);
+        border-radius: $grid-gutter-width / 4;
+        box-shadow: 3px 3px 8px rgba(0,0,0,0.10);
+    }
+
+    .form-group {
+        label {
+            font-weight: bold;
+            margin-bottom: 0;
+        }
+
+        input {
+            margin-right: $grid-gutter-width / 2;
+        }
+    }
+
+    [data-section="time"], [data-section="pace"] {
+        span {
+            display: inline-block; margin-right: $grid-gutter-width / 2;
+            font-weight: bold;
+        }
+
+        input {
+            text-align: right;
+        }
+
+        #per {
+            margin-top: $grid-gutter-width / 4;
+
+            label {
+                font-weight: normal;
+                margin-right: $grid-gutter-width / 4;
+            }
+        }
+    }
+}
+
+
+
+.animation-target {
+  -webkit-animation: animation 1000ms linear both;
+  animation: animation 1000ms linear both;
+}
+
+@keyframes animation {
+  0% {  transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -300, 0, 0, 1) translate(-50%, -50%); }
+  1.3% {  transform: matrix3d(3.905, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -237.02, 0, 0, 1) translate(-50%, -50%); }
+  2.55% {  transform: matrix3d(4.554, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -182.798, 0, 0, 1) translate(-50%, -50%); }
+  4.1% {  transform: matrix3d(4.025, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -125.912, 0, 0, 1) translate(-50%, -50%); }
+  5.71% {  transform: matrix3d(3.039, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -79.596, 0, 0, 1) translate(-50%, -50%); }
+  8.11% {  transform: matrix3d(1.82, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -31.647, 0, 0, 1) translate(-50%, -50%); }
+  8.81% {  transform: matrix3d(1.581, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -21.84, 0, 0, 1) translate(-50%, -50%); }
+  11.96% {  transform: matrix3d(1.034, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 4.825, 0, 0, 1) translate(-50%, -50%); }
+  12.11% {  transform: matrix3d(1.023, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 5.53, 0, 0, 1) translate(-50%, -50%); }
+  15.07% {  transform: matrix3d(0.947, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 12.662, 0, 0, 1) translate(-50%, -50%); }
+  16.12% {  transform: matrix3d(0.951, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 13.007, 0, 0, 1) translate(-50%, -50%); }
+  27.23% {  transform: matrix3d(1.001, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 2.352, 0, 0, 1) translate(-50%, -50%); }
+  27.58% {  transform: matrix3d(1.001, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 2.121, 0, 0, 1) translate(-50%, -50%); }
+  38.34% {  transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.311, 0, 0, 1) translate(-50%, -50%); }
+  40.09% {  transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.291, 0, 0, 1) translate(-50%, -50%); }
+  50% {  transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -0.048, 0, 0, 1) translate(-50%, -50%); }
+  60.56% {  transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0.007, 0, 0, 1) translate(-50%, -50%); }
+  82.78% {  transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1) translate(-50%, -50%); }
+  100% {  transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1) translate(-50%, -50%); }
+}
+
+.copy {
+    font-size: 12px;
+}
