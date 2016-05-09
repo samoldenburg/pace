@@ -78,6 +78,8 @@ class Calculator extends React.Component {
         let paceMinutes = LeftPad(Math.floor(Moment.duration(this.state.paceTime, 'seconds').asMinutes()) - paceHours * 60, 2, 0)
         let paceSeconds = LeftPad(Math.floor(this.state.paceTime - (paceMinutes * 60) - (paceHours * 60 * 60)), 2, 0)
 
+        let speed = (60 * 60 / this.state.paceTime).toFixed(2);
+
         return (
             <div className="calculator animation-target">
                 <h1>Pace Calculator</h1>
@@ -111,6 +113,7 @@ class Calculator extends React.Component {
                             <option value="mi">Mile</option>
                             <option value="km">Kilometer</option>
                         </select>
+                        <span id="speed">{speed} {this.state.unit}/hr</span>
                     </div>
                 </fieldset>
                 <div className="copy">

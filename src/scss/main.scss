@@ -48,13 +48,14 @@ body {
         }
 
         input {
-            margin-right: $grid-gutter-width / 2;
+            margin-right: $grid-gutter-width / 4;
         }
     }
 
     [data-section="time"], [data-section="pace"] {
         span {
-            display: inline-block; margin-right: $grid-gutter-width / 2;
+            display: inline-block;
+            margin-right: $grid-gutter-width / 4;
             font-weight: bold;
         }
 
@@ -68,6 +69,16 @@ body {
             label {
                 font-weight: normal;
                 margin-right: $grid-gutter-width / 4;
+            }
+
+            select {
+                margin-right: $grid-gutter-width / 4;
+            }
+
+            #speed {
+                span {
+                    font-weight: normal;
+                }
             }
         }
     }
